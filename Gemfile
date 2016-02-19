@@ -26,14 +26,24 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
+##############################################################################
+## Here be custom gems
+##############################################################################
 # configuration management
 gem 'figaro'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+#haml ftw
+gem 'haml'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# boostrap
+gem "twitter-bootstrap-rails" # rails generate bootstrap:install static
+
+# user authentication
+gem 'devise' # rails generate devise:install
+
+##############################################################################
+## Here be custom gems
+##############################################################################
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,4 +57,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
