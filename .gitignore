@@ -1,3 +1,4 @@
+.vagrant
 config/application.yml
 *.rbc
 capybara-*.html
