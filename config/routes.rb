@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  devise_for :books
+  devise_for :pages
+
   get 'about' => 'website#about'
   get 'why' => 'website#why'
 
