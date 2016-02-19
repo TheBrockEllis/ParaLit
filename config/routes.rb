@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'about' => 'website#about'
   get 'why' => 'website#why'
 
+  get 'dashboard' => 'dashboard#index'
+
   root "website#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
