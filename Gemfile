@@ -41,6 +41,12 @@ gem "twitter-bootstrap-rails" # rails generate bootstrap:install static
 # user authentication
 gem 'devise' # rails generate devise:install
 
+#phpmyadmin-esque backend
+gem 'rails_admin'
+
+#form builder
+gem 'simple_form'
+
 ##############################################################################
 ## Here be custom gems
 ##############################################################################

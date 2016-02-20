@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'register', :forgot_password => 'reset'}
   devise_for :books
   devise_for :pages
 
   get 'about' => 'website#about'
   get 'why' => 'website#why'
 
-  get 'dashboard' => 'dashboard#index'
+  get 'dashboard' => 'dashboard#index', as: 'dashboard'
 
-  root "website#index"
+  #get 'books' => 'book#index', as: 'books' #this list will be shown in the dashboard index
+  get 'books/new' => 'book#new', as: 'new_book'
+  post 'books/create' => 'book#create', as: 'create_book'
+  get 'books/:id' => 'book#show', as: 'show_book'
+  get 'books/:id/edit' => 'book#edit', as: 'edit_book'
+  put 'books/:id' => 'book#update', as: 'update_book'
+  delete 'books/:id' => 'book#destroy', as: 'destroy_book'
+
+  root 'website#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
