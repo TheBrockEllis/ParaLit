@@ -50,6 +50,15 @@ gem 'simple_form'
 #bootstrap modal confirm dialogs
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 
+#add breadcrumbs to views
+gem 'breadcrumbs_on_rails'
+
+#manage uploading of files
+gem 'paperclip', '~> 4.3'
+
+#be able to connect and send data to Amazon S3
+gem 'aws-sdk', '>= 2.0.0'
+
 ##############################################################################
 ## Here be custom gems
 ##############################################################################

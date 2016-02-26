@@ -1,13 +1,18 @@
 class BooksController < ApplicationController
 
+  add_breadcrumb 'Dashboard', :dashboard_path
+
   def index
     #this is not used because the listing of books is done in the dashboard#index
   end
 
   def show
+    #this will be the fancy HTML5 flip book page, where you'd actually read the book
   end
 
   def new
+    add_breadcrumb 'New book', new_book_path
+
     @book = Book.new
   end
 
@@ -23,6 +28,8 @@ class BooksController < ApplicationController
   def edit
     @book = Book.find(params[:id])
     @pages = @book.pages
+
+    add_breadcrumb 'Book Settings', edit_book_path(@book)
   end
 
   def update

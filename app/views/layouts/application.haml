@@ -13,4 +13,7 @@
       %div{ class: "alert alert-#{key}" }
         = value
 
+    - if user_signed_in?
+      = render 'layouts/breadcrumbs' unless @disable_breadcrumbs
+
     = yield
