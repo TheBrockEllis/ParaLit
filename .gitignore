@@ -1,4 +1,5 @@
-.idea
+.idea/
+.idea/workspace.xml
 .vagrant
 config/application.yml
 *.rbc
