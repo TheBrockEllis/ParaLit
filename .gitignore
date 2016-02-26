@@ -1,6 +1,6 @@
 .idea/
 .idea/workspace.xml
-.vagrant
+.vagrant/*
 config/application.yml
 *.rbc
 capybara-*.html
