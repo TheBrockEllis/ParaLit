@@ -1,0 +1,29 @@
+%h1 Book Settings
+= simple_form_for @book do |f|
+  = f.input :title, label: 'Book title', error: 'Title is mandatory, please specify one'
+  = f.input :author, label: 'Author'
+  = f.input :description, label: 'Book description'
+  = f.button :submit
+
+.panel.panel-default
+  .panel-heading
+    Pages
+    = link_to 'New Page', new_book_page_path(@book), { :class => 'pull-right' }
+
+  %table.table
+    %tr
+      %th Page Sequence
+      %th Content
+      %th Thumbnail
+      %th
+    - @pages.each do |p|
+      %tr
+        %td
+          = p.sequence
+        %td
+          = p.content
+        %td
+          = p.image_location
+        %td
+          = link_to 'Delete', destroy_page_path(p), { :class => 'btn pull-right', :method => :delete, :data => {confirm: 'Are you sure you want to delete this pages?', commit: 'Delete Book'} }
+          = link_to 'Edit', edit_page_path(p), { :class => 'btn btn-primary pull-right' }

@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  belongs_to :book
+  belongs_to :books
 
-  delegate :user, :to => :book, :allow_nil => true
+  delegate :user, :to => :books, :allow_nil => true
 end

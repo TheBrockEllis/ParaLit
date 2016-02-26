@@ -1,4 +1,4 @@
-= simple_form_for(@book, url: create_book_path, method: :post) do |f|
+= simple_form_for @book do |f|
   = f.input :title, label: 'Book title', error: 'Title is mandatory, please specify one'
   = f.input :author, label: 'Author'
   = f.input :description, label: 'Book description'

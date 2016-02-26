@@ -47,6 +47,9 @@ gem 'rails_admin'
 #form builder
 gem 'simple_form'
 
+#bootstrap modal confirm dialogs
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
+
 ##############################################################################
 ## Here be custom gems
 ##############################################################################

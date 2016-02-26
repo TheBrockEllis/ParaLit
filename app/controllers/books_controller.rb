@@ -1,4 +1,4 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
 
   def index
     #this is not used because the listing of books is done in the dashboard#index
@@ -21,16 +21,24 @@ class BookController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
+    @pages = @book.pages
   end
 
   def update
+    @book = Book.find(params[:id])
+    @book.update_attributes(secure_params)
+    @book.save
+
+    flash[:success] = 'Book settings updated'
+    redirect_to dashboard_path
   end
 
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
 
-    redirect_to '/dashboard'
+    redirect_to dashboard_path
   end
 
   private
