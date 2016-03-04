@@ -51,6 +51,7 @@ gem 'simple_form'
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 
 #add breadcrumbs to views
+## TODO the twitter-bootstrap-rails gem provides this same functionality - refactor this out
 gem 'breadcrumbs_on_rails'
 
 #manage uploading of files

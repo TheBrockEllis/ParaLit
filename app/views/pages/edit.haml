@@ -1,0 +1,6 @@
+%h1 Edit Page
+
+.container
+  .row-fluid
+    = simple_form_for [@book, @page], url: book_page_path(@book, @page), html: {multipart: true, method: :put} do |f|
+      = render partial: 'pages/form', locals: { :f => f, :book => @book, :page => @page }
