@@ -7,5 +7,5 @@
     Cancel
 
 .right-side.col-sm-6
-  %img{src: 'http://placehold.it/300x300'}
+  = image_tag page.image.url(:medium)
   = f.input :image, label: 'Image', as: :file

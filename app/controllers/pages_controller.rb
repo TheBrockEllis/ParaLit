@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
     @page = Page.new(secure_params)
     @page.book_id = params[:book_id]
-    #@page.image = params[:page][:image]
+    @page.image = params[:page][:image]
 
     @page.save
 
