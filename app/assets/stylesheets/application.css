@@ -14,3 +14,17 @@
  *= require_tree .
  *= require bootstrap_and_overrides
  */
+
+@import url("https://fonts.googleapis.com/css?family=Exo+2");
+
+* {
+    font-family: 'Exo 2', sans-serif;;
+}
+
+.alert {
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+}
+

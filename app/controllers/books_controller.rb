@@ -8,6 +8,10 @@ class BooksController < ApplicationController
 
   def show
     #this will be the fancy HTML5 flip book page, where you'd actually read the book
+    @book = Book.find(params[:id])
+    @pages = @book.pages
+
+    add_breadcrumb @book.title, edit_book_path(@book)
   end
 
   def new
@@ -51,7 +55,7 @@ class BooksController < ApplicationController
   private
 
   def secure_params
-    params.require(:book).permit(:title, :author, :description)
+    params.require(:book).permit(:title, :author, :font, :description)
   end
 
 end

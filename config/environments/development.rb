@@ -41,4 +41,8 @@ Rails.application.configure do
 
   # added because devise told me to
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #tell Paperclip (photo uploading) where to find the ImageMagik utility
+  Paperclip.options[:command_path] = "/usr/bin/"
+
 end

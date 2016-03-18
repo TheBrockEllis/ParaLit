@@ -5,9 +5,13 @@ class WebsiteController < ApplicationController
   end
 
   def about
+    @disable_breadcrumbs = true
+
   end
 
   def why
+    @disable_breadcrumbs = true
+
   end
 
 end

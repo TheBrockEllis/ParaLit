@@ -15,5 +15,14 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require data-confirm-modal
+//= require row-sorter
+//= require hash
+//= require scissor.min.js
+//= require turn.min
+//= require zoom.min
+//= require jquery-readyselector
 
 //= require_tree .
+
+
+//https://github.com/borayazilim/rowsorter

@@ -1,6 +1,7 @@
 .left-side.col-sm-6
   = f.input :sequence, label: 'Page sequence', as: :integer
   = f.input :content, label: 'Content'
+
   = f.button :submit
 
   %a{ href: edit_book_path(book), class: 'pull-right' }

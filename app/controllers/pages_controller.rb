@@ -58,7 +58,7 @@ class PagesController < ApplicationController
   private
 
   def secure_params
-    params.require(:page).permit(:sequence, :content)
+    params.require(:page).permit(:sequence, :content, :image)
   end
 
 end

@@ -58,7 +58,7 @@ gem 'breadcrumbs_on_rails'
 gem 'paperclip', '~> 4.3'
 
 #be able to connect and send data to Amazon S3
-gem 'aws-sdk', '>= 2.0.0'
+gem 'aws-sdk', '< 2.0'
 
 ##############################################################################
 ## Here be custom gems

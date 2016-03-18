@@ -6,9 +6,9 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-@import "twitter/bootstrap/variables.less";
+/*@import "twitter/bootstrap/variables.less";
 @import "twitter/bootstrap/mixins.less";
-@import "twitter/bootstrap/alerts.less";
+@import "twitter/bootstrap/alerts.less";*/
 
 .alert-notice {
 @extend .alert-success

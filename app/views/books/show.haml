@@ -1,0 +1,14 @@
+#flipbook{ data: { :font => "#{@book.font ? @book.font : ''}"} }
+
+  .page.hard
+    %h1
+      = @book.title
+  .hard
+
+  - @pages.each_with_index do |p, index|
+    .page{:class => "#{ index == @pages.size - 1 ? 'hard' : ''} "}
+      = image_tag p.image.url(:medium)
+      %p
+        = p.content
+
+  .hard
