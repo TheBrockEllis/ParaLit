@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-ui/sortable
 //= require jquery-ui/effect-highlight
-//= require twitter/bootstrap
 //= require turbolinks
 //= require data-confirm-modal
 //= require pages.coffee
@@ -26,3 +26,7 @@
 
 //= require_tree .
 
+jQuery(function() {
+  $("a[rel~=popover], .has-popover").popover();
+  $("a[rel~=tooltip], .has-tooltip").tooltip();
+});

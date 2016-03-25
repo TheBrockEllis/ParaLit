@@ -12,8 +12,14 @@
  *
  *= require_self
  *= require_tree .
- *= require bootstrap_and_overrides
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'book';
+@import 'dashboard';
+@import 'pages';
+@import 'website';
 
 @import url("https://fonts.googleapis.com/css?family=Exo+2");
 
