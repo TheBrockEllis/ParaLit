@@ -1,8 +1,21 @@
-.pages-content {
-  width: 60%;
+.ui-sortable-placeholder {
+  height: 100px;
 }
 
-td.sorter {
-  background-color: #F0F0F0;
-  cursor: move !important;
+.ui-sortable-helper {
+  display: table;
+  box-shadow: 0px 0px 10px 1px;
+  opacity: 1;
+  background-color: #f0f0f0;
 }
+
+#sortable {
+  cursor: move;
+
+  .dragger { width: 5%; background-color: #F0f0f0; }
+  .content { width: 55%; }
+  .thumb { width: 15%; }
+  .action { width: 25%; }
+}
+
+

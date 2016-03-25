@@ -32,6 +32,14 @@ class PagesController < ApplicationController
     add_breadcrumb 'Edit Page', edit_book_page_path(@book, @page)
   end
 
+  def update_row_order
+    @page = Page.find(secure_params[:id])
+    @page.row_order_position = secure_params[:row_order_position]
+    @page.save
+
+    render nothing: true # this is a POST action, updates sent via AJAX, no view rendered
+  end
+
   def destroy
     @book = Book.find(params[:book_id])
 
@@ -58,7 +66,7 @@ class PagesController < ApplicationController
   private
 
   def secure_params
-    params.require(:page).permit(:sequence, :content, :image)
+    params.require(:page).permit(:book_id, :id, :row_order_position, :content, :image)
   end
 
 end

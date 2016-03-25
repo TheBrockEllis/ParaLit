@@ -6,12 +6,10 @@ class WebsiteController < ApplicationController
 
   def about
     @disable_breadcrumbs = true
-
   end
 
   def why
     @disable_breadcrumbs = true
-
   end
 
 end

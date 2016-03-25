@@ -5,27 +5,31 @@
   = f.input :font, label: 'Font family', :include_blank => 'Default system font', collection: Book::FONT_HASH.sort.map {|k,v| [v,k]}, as: :select
   = f.button :submit, { class: 'btn btn-primary' }
 
+
+
 .panel.panel-default#book-pages
   .panel-heading
     Pages
     = link_to 'New Page', new_book_page_path(@book), { :class => 'pull-right' }
 
-  %table.table.sortable
+  %table.table#sortable{ data: { 'book-id' => @book.id }}
+    %colgroup>
+      %col.dragger
+      %col.content
+      %col.thumb.hidden-xs
+      %col.action
     %thead
-      %tr.pages-header
+      %tr
         %th
-        %th Page Sequence
         %th Content
         %th Thumbnail
         %th
     %tbody
       - @pages.each do |p|
-        %tr{ data: { page_id: "#{p.id}" } }
-          %td.sorter
+        %tr.item{ data: { 'item-id' => "#{p.id}" } }
+          %td
             %i.fa.fa-arrows
           %td
-            = p.sequence
-          %td.pages-content
             = p.content
           %td
             = image_tag p.image.url(:thumb)

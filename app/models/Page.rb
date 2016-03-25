@@ -1,4 +1,7 @@
 class Page < ActiveRecord::Base
+  include RankedModel
+  ranks :row_order, :with_same => :book_id
+
   belongs_to :books
 
   has_attached_file :image,

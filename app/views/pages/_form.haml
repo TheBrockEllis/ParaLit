@@ -9,4 +9,4 @@
 
 .right-side.col-sm-6
   = image_tag page.image.url(:medium)
-  = f.input :image, label: 'Image', as: :file
+  = f.input :image, label: 'Image', as: :file, accepts: 'image/*'

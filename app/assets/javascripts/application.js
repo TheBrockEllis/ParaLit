@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/sortable
+//= require jquery-ui/effect-highlight
 //= require twitter/bootstrap
 //= require turbolinks
 //= require data-confirm-modal
-//= require row-sorter
+//= require pages.coffee
 //= require hash
 //= require scissor.min.js
 //= require turn.min
@@ -24,5 +26,3 @@
 
 //= require_tree .
 
-
-//https://github.com/borayazilim/rowsorter

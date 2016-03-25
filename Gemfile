@@ -36,7 +36,9 @@ gem 'figaro'
 gem 'haml'
 
 # boostrap
-gem "twitter-bootstrap-rails" # rails generate bootstrap:install static
+gem 'therubyracer'
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails' # rails generate bootstrap:install static
 
 # user authentication
 gem 'devise' # rails generate devise:install
@@ -59,6 +61,12 @@ gem 'paperclip', '~> 4.3'
 
 #be able to connect and send data to Amazon S3
 gem 'aws-sdk', '< 2.0'
+
+#drag and drog sortable pages
+gem 'ranked-model'
+
+#used for the drag and drop sortable on pages
+gem 'jquery-ui-rails'
 
 ##############################################################################
 ## Here be custom gems

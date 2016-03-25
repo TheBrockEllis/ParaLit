@@ -13,8 +13,11 @@ Rails.application.routes.draw do
   #get 'books' => 'books#index', as: 'books' #this list will be shown in the dashboard index
 
   resources :books, :except => [:index] do
-    resources :pages, :except => [:index, :show]
+    resources :pages, :except => [:index, :show] do
+      post :update_row_order, on: :collection
+    end
   end
+
 
 =begin
   get 'books/new' => 'books#new', as: 'new_book'
