@@ -34,3 +34,14 @@
     right: 15px;
 }
 
+.alert-notice {
+  @extend .alert-success
+}
+
+.alert-alert {
+  @extend .alert-danger
+}
+
+@media (max-width: $screen-xs) {
+  body { background-color: red };
+}
